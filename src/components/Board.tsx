@@ -8,6 +8,7 @@ import { getBoard, getCurrentPlayer, getWinner } from "../reducers/selectors";
 import { Color } from "../types";
 import { Button } from "./Button";
 import { Row } from "./Row";
+import { Scoreboard } from "./Scoreboard";
 
 interface Props {
   board: ReturnType<typeof getBoard>;
@@ -61,6 +62,7 @@ export class BoardComponent extends React.Component<Props> {
       </Button>
     );
   }
+
   render() {
     const classes = cn("Game-Board");
 
@@ -71,6 +73,9 @@ export class BoardComponent extends React.Component<Props> {
         <div className="Game">
           <div className={classes}>{this.props.board.map(this.displayRow)}</div>
         </div>
+
+        <Scoreboard />
+
         {this.displayActions()}
       </>
     );
@@ -80,7 +85,7 @@ export class BoardComponent extends React.Component<Props> {
 const mapState = (state: RootState) => ({
   board: getBoard(state),
   color: getCurrentPlayer(state),
-  winner: getWinner(state)
+  winner: getWinner(state),
 });
 
 export const Board = connect(mapState, { dropCoin, reset })(BoardComponent);

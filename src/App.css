@@ -83,3 +83,26 @@
   background-color: red;
 }
 
+.Game-Scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.Game-Scoreboard-Item {
+  margin: 10px;
+  padding: 4px;
+  border-radius: 3px;
+  border: 1px solid #cacaca;
+  flex-grow: 0;
+  flex-basis: 50%;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.Game-Scoreboard-Item-Title {
+  font-size: 80%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
