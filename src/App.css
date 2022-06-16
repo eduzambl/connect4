@@ -67,3 +67,19 @@
     transform: rotateY(180deg);
   }
 }
+
+.Game-Button {
+  margin: 10px;
+  padding: 4px;
+  border-radius: 3px;
+  color: white;
+  background-color: green;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.Game-Button--secondary {
+  background-color: red;
+}
+
