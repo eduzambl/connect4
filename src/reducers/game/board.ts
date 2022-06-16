@@ -1,5 +1,5 @@
-import { Color } from "../../types";
 import { Action } from "../../actions/types";
+import { Color } from "../../types";
 import { dropCoin } from "./dropCoin";
 import { getInitialBoard } from "./getInitialBoard";
 
@@ -15,6 +15,9 @@ export const reducer = (
     case "DROP_COIN":
       const { column, color } = action.payload;
       return dropCoin(state, column, color);
+
+    case "RESET":
+      return initialState;
 
     default:
       return state;
