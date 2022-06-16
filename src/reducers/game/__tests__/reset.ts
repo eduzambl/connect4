@@ -22,6 +22,6 @@ describe("test game reset", () => {
           type: "RESET",
         }
       )
-    ).toEqual({ board: initialState });
+    ).toEqual({ board: initialState, wins: { red: 0, yellow: 0 } });
   });
 });

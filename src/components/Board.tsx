@@ -8,7 +8,7 @@ import { getBoard, getCurrentPlayer, getWinner } from "../reducers/selectors";
 import { Color } from "../types";
 import { Button } from "./Button";
 import { Row } from "./Row";
-import { Scoreboard } from "./Scoreboard";
+import { ScoreBoard } from "./Scoreboard";
 
 interface Props {
   board: ReturnType<typeof getBoard>;
@@ -74,7 +74,7 @@ export class BoardComponent extends React.Component<Props> {
           <div className={classes}>{this.props.board.map(this.displayRow)}</div>
         </div>
 
-        <Scoreboard />
+        <ScoreBoard />
 
         {this.displayActions()}
       </>

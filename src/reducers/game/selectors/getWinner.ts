@@ -11,6 +11,7 @@ export function getWinner(state: LocalState) {
     const winner = testCombination(state.board, combination);
 
     if (winner) {
+      
       return winner;
     }
   }
